@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="浜田省吾のコピーバンドです。平均年齢50歳越えですが、いつまでも心は若い気持ちで頑張っております。YOUTUBEに動画もアップしておりますので聴いて頂けたらと思います。">
+  <title>HAMASHOクラブバンド　ホームページ</title>
+  <link rel="stylesheet" href="oyaji.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-logo">
+    HAMASHOクラブバンド
+  </div>
+  <div class="header-list">
+    <ul>
+      <li>NEWS</li>
+      <li>LIVE</li>
+      <li>MEMBER</li>
+      <li>CONTACT</li>
+    </ul>
+  </div>
+</div>
+<div class="top-wrapper">
+
+</div>
+
+<div class="footer">
+
+</div>
+</body>
