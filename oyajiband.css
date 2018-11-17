@@ -1,0 +1,36 @@
+body{
+  font-family:"Merriweather",serif;
+  color:white;
+
+}
+
+li{
+  list-style:none;
+  float:left;
+  padding:15px 40px;
+
+}
+
+.header-logo{
+  float:left;
+  font-size: 35px
+}
+
+.header-list{
+  float:right;
+  font-size: 20px
+}
+
+.header{
+  background-color: black;
+  height: 90px;
+
+}
+
+.top-wrapper{
+  background-image: url(IMG-2896.JPG);
+  padding-top:180px;
+  padding-bottom:100px;
+  background-size:cover;
+
+}
