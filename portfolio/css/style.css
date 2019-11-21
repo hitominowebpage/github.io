@@ -1,0 +1,55 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+    font-family: ;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+section{
+	width:100vw;
+	height:100vh;
+}
+
+h1{
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+p {
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Caveat', cursive;
+font-family: 'Satisfy', cursive;
+font-size:180px;
+}
+
+section>div{
+width:75%;
+
+}
+
+p{
+	
+
+}
+
+nav>ul{
+font-size:20px;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Caveat', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Asap', sans-serif;
+position:fixed;
+top:120px;
+left:20px;
+}
