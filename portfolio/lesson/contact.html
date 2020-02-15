@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('input,textarea').on('blur',function(){
+				
+				var name = $(this).attr('name'); //blurしたinputのIDを取得  attrはjqueryの関数 属性値をとる
+				
+				//nullチャック
+				var val = $(this).val();  //blurしたinputのvalueを取得
+				//console.log(name + '&' + val); //nameは属性値
+
+　　　　　　　　　　//Nullチェック機能　＝　(Function:関数)
+				//nullChk(val );
+				if(!nullChk(val)) {
+					errorMessage(name, '入力必須項目です');
+					return false;
+				};	
+
+				
+
+				if(name=='tel'){
+					//console.log(val.match(/^\d{10,11}$/));
+					if(!telChk(val)) errorMessage(name,'電話番号の形式が異なります');
+				}else if(name=='mail'){
+					//mailChk(val);
+					if(!mailChk(val)) errorMessage(name,'メールアドレスの形式が異なります');
+				}else{
+					if(!symbolChk(val)) errorMessage(name,'不正な記号が含まれています');
+
+				}
+				
+				//telChk
+				function telChk(val){
+					if(val.match(/^\d{10,11}$/)){
+						console.log('true');
+						return true;
+						
+					}else{
+						console.log('felse');
+						return false;
+					}
+
+				}
+
+				//mailChk
+				function mailChk(val){
+				if(val.match(/^[A-Za-z0-9]{1}[A-Za-z0-9_.-]+@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/)){
+					console.log('true');
+					return true;
+
+				}else{
+					console.log('felse')
+					return false;
+
+				}
+				}
+
+
+
+			})
+
+			function symbolChk(val){
+				if(val.match(/[!"#$%&'()\*\+\-\.,\/:;<=>?@\[\\\]^_`{|}~]/g)){
+					//  ＊　０回以上の繰り返し
+					//+ 1 
+					// \はエスケープ処理（後ろの文字を記号として取り扱う）
+
+					console.log('felse');
+					return false;
+
+				}else{
+					console.log('true');
+					return true;
+
+				}
+
+				}
+			});
+
+
+            //null_chk
+            //nullChk
+            //NullChk
+
+			function nullChk(val){
+				//if文の通常の書き方
+				if(val==''){
+					//console.log('false');
+					return false;
+
+				}else{
+					//console.log('true');
+					return true;
+
+				}
+			}
+
+			//return(val=='')? false : true;
+			//return(条件式)？　真の時　：　偽の時　；
+
+			//return val!='' ? true : false;
+			//三項演算子演算子（jsの場合）処理が早いこと
+
+
+			//DOMの読み込み完了後、じこう（画像は含まない）
+　　　　　　　//$(function(){
+
+           //}
+			//全ての読み込み完了後、実行（DOM/画像データを含む）
+			$(window).on('load',function(){
+
+			});
+			//エラーメッセージ出力用関数
+			function errorMessage(name, message){
+				$('P#'+ name + ' span').text(message);
+
+
+
+			}
+			
+
+	</script>
+
+
+</head>
+<body>
+<form action="#" method="post">
+	<p id="name">お名前（必須）：<span>エラーメッセージ</span><br>
+	<input type="text" name="name"></p>
+	<p id="mail">メールアドレス(必須)：<span>エラーメッセージ</span><br>
+	<input type="email" name="mail"></p>
+	<p id="tel">電話番号(必須)<span>エラーメッセージ</span><br>
+	<input type="tel" name="tel"></p>
+	<p id="sub">題名（必須）：<span>エラーメッセージ</span><br>
+	<input type="text" name="sub"></p>
+    <p id="content">内容(必須)：<span>エラーメッセージ</span><br>
+    <input type="textarea" name="content"></p>
+
+
+</form>
+</body>
+</html>
